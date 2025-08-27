@@ -8,9 +8,9 @@ Settings.embed_model = OllamaEmbedding(
     base_url="http://localhost:11434"
 )
 
-# Configure Ollama LLM
+# Configure Ollama LLM with a very small model
 Settings.llm = Ollama(
-    model="qwen3:4b",  # or whatever model you have in Ollama
+    model="llama3.2:1b",  # Very small 1B parameter model
     base_url="http://localhost:11434"
 )
 documents = SimpleDirectoryReader('files').load_data()
